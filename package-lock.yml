@@ -1,0 +1,14 @@
+packages:
+  - name: audit_helper
+    package: dbt-labs/audit_helper
+    version: 0.12.1
+  - name: dbt_utils
+    package: dbt-labs/dbt_utils
+    version: 1.3.0
+  - git: https://github.com/dbt-labs/dbt-codegen.git
+    name: codegen
+    revision: ec19358e76edf09db8ab1a11d69fa3140c6c08d4
+  - name: snowflake_spend
+    package: gitlabhq/snowflake_spend
+    version: 1.4.0
+sha1_hash: 531873a573b02b513cc23ce7daa442e983ea8d11
