@@ -1,0 +1,8 @@
+groups:
+  - name: finance
+    owner:
+      name: Firstname Lastname
+      email: finance@bikeshop.com
+  - name: product
+    owner:
+      email: product@bikeshop.com

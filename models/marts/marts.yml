@@ -10,10 +10,30 @@ models:
           - unique
           - not_null
   - name: fct_orders
-    description: orders fact model
+    latest_version: 1
+    config:
+      contract:
+        enforced: true
+      group: finance
+      access: public
     columns:
       - name: order_id
-        description: the primary key for orders
-        tests:
-          - unique
-          - not_null
+        data_type: number
+        constraints:
+          - type: not_null
+      - name: customer_id
+        data_type: number
+      - name: order_date
+        data_type: date
+      - name: amount
+        data_type: number
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns: 
+          - name: order_amount
+            data_type: number
+          - include: all
+            exclude: [amount]
