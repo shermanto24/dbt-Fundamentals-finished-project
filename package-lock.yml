@@ -1,0 +1,5 @@
+packages:
+  - name: dbt_meta_testing
+    package: tnightengale/dbt_meta_testing
+    version: 0.4.0
+sha1_hash: 9ec5bd051b0800c08f32279c1dc66b6a4f2c53d3
