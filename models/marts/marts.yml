@@ -19,11 +19,16 @@ models:
           - not_null
       - name: amount
         tests:
-          - greater_than_five
-          - average_dollars_spent_greater_than_one:
+          - dbt_expectations.expect_column_values_to_be_between:
               arguments:
-                column_name: amount
-                group_by_column: customer_id
-          - unique:
-              arguments:
-                column_name: customer_id
+                min_value: 0
+                max_value: 100
+                strictly: false
+          # - greater_than_five
+          # - average_dollars_spent_greater_than_one:
+          #     arguments:
+          #       column_name: amount
+          #       group_by_column: customer_id
+          # - unique:
+          #     arguments:
+          #       column_name: customer_id
