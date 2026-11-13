@@ -17,3 +17,26 @@ models:
         tests:
           - unique
           - not_null
+
+exposures:
+  - name: orders_data
+    label: orders_data
+    type: notebook
+    maturity: high
+    url: https://tinyurl.com/jaffle-shop-reporting
+    description: 'Exposure for orders data'
+    depends_on:
+      - ref('fct_orders')
+    owner:
+      name: Michael McData
+      email: data@jaffleshop.com
+
+  - name: customers_data
+    type: notebook
+    url: https://tinyurl.com/jaffle-shop-reporting
+    description: 'Exposure for customers data'
+    owner:
+      name: Michael McData
+      email: data@jaffleshop.com
+    depends_on:
+      - ref('fct_orders')
